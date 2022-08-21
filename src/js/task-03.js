@@ -32,12 +32,13 @@ const some = ulEl.insertAdjacentHTML('beforeend',
 element.push(some);
 }
 
-// ulEl.style.cssText = `
-// display: flex;
-// align-items: center;
-// justify-content: space-between;
-// list-style-type: none;
-// margin-right: 10px;
-// `
+
+ulEl.style.cssText += `
+ul.style.display: "flex";
+align-items: center;
+justify-content: space-between;
+list-style-type: none;
+margin: 0;
+weight = 15px`
 
 
