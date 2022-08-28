@@ -5,11 +5,11 @@
 const input = document.querySelector('#name-input');
 
 const title = document.querySelector('#name-output');
-input.addEventListener('input', newInp);
+input.addEventListener('input', checkInput);
 
-function newInp(a) {
-    title.textContent = a.currentTarget.value;
-    if (a.currentTarget.value === " ") {
+function checkInput(event) {
+    title.textContent = event.currentTarget.value;
+    if (event.currentTarget.value === "") {
         title.textContent = "Anonymous"
     }
 }

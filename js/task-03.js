@@ -24,13 +24,8 @@ const images = [
 
 const ulEl = document.querySelector('.gallery');
 
-const element = [];
-
-for (const el of images){
-const some = ulEl.insertAdjacentHTML('beforeend', 
-`<li><img src = '${el.url}' alt = '${el.alt}' width = '350' ></li>`); 
-element.push(some);
-}
+const elements = images.map((image) => `<li><img src = '${image.url}' alt = '${image.alt}' width = '350' ></li>`).join('');
+ulEl.insertAdjacentHTML('beforeend', elements);
 
 
 ulEl.style.cssText += `
